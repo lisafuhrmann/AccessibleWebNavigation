@@ -1,46 +1,46 @@
 header {
-  background-color: #e64414;
   height: 160px;
+  background-color: #e64414;
 }
 
 h1 {
-  color: #ffffff;
-  font-size: 80px;
   padding: 40px 0;
+  color: #fff;
+  font-size: 80px;
 }
 
 section {
   width: 70%;
-  margin: 112px auto 30px auto;
-  background-color: #ffffff;
+  margin: 112px auto 30px;
+  background-color: #fff;
 }
 
 h2 {
+  padding: 90px 40px;
   color: #565656;
   font-size: 80px;
-  padding: 90px 40px;
 }
 
 h3 {
+  padding: 75px 40px 55px;
   color: #e64414;
   font-size: 40px;
-  padding: 75px 40px 55px 40px;
 }
 
 h4 {
+  padding-top: 10px;
   color: #565656;
   font-size: 30px;
-  padding-top: 10px;
 }
 
 p {
-  font-size: 20px;
   padding-top: 20px;
+  font-size: 20px;
 }
 
 body {
   background-color: #F0EEEC;
-  font-family: 'Lexend', sans-serif;
+  font-family: Lexend, sans-serif;
 }
 
 nav{
@@ -52,13 +52,13 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
 }
 
 li {
-  font-size: 30px;
   padding-top: 40px;
+  font-size: 30px;
 }
 
 a {
@@ -67,17 +67,17 @@ a {
 }
 
 article {
-  color: #565656;
-  padding: 40px 40px;
   height: 80px;
+  padding: 40px;
   border-top: #565656 solid 1px;
+  color: #565656;
 }
 
 iframe {
+  position: relative;
+  top: -800px;
+  left: 88%;
   width: 15%;
   height: 800px;
   border: none;
-  position: relative;
-  left: 88%;
-  top: -800px;
 }
