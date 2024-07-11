@@ -20,6 +20,34 @@ if ("webkitSpeechRecognition" in window) {
   function handleVoiceCommand(command) {
     if (command.includes("menü")) {
       document.querySelector('a[href="https://www.spiegel.de/"]').click();
+    } else if (command.includes("schlagzeilen")) {
+      document
+        .querySelector('a[href="https://www.spiegel.de/schlagzeilen/"]')
+        .click();
+    } else if (command.includes("igel+")) {
+      document.querySelector('a[href="https://www.spiegel.de/plus/"]').click();
+    } else if (command.includes("fußball-em")) {
+      document
+        .querySelector(
+          'a[href="https://www.spiegel.de/thema/fussball_em_2024/"]'
+        )
+        .click();
+    } else if (command.includes("klimakrise")) {
+      document
+        .querySelector('a[href="https://www.spiegel.de/thema/klimawandel/"]')
+        .click();
+    } else if (command.includes("politik")) {
+      document.querySelector('a[href=""]').click();
+    } else if (command.includes("ausland")) {
+      document.querySelector('a[href=""]').click();
+    } else if (command.includes("panorama")) {
+      document.querySelector('a[href=""]').click();
+    } else if (command.includes("sport")) {
+      document.querySelector('a[href=""]').click();
+    } else if (command.includes("wirtschaft")) {
+      document.querySelector('a[href=""]').click();
+    } else if (command.includes("wissenschaft")) {
+      document.querySelector('a[href=""]').click();
     }
   }
 } else {
