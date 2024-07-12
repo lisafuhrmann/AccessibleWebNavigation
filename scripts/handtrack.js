@@ -33,7 +33,7 @@ handTrack.load(modelParams).then((lmodel) => {
       console.log("Video started");
       runDetection();
     } else {
-      console.error("Please enable video");
+      alert("Bitte aktivieren Sie Ihre Kamera.");
     }
   });
 });

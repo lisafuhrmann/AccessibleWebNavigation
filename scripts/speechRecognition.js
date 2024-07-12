@@ -50,6 +50,11 @@ if ("webkitSpeechRecognition" in window) {
       document.querySelector('a[href=""]').click();
     }
   }
+
+  recognition.onerror = function (event) {
+    console.error("Speech recognition error detected: " + event.error);
+    alert("Ein Fehler ist aufgetreten: " + event.error);
+  };
 } else {
   alert("Ihr Browser unterstützt die Web Speech API nicht.");
 }

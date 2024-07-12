@@ -13,7 +13,7 @@
 
 .teaser {
   height: 250px;
-    flex: 1;
+  flex: 1;
 }
 
 .news {
@@ -32,4 +32,58 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Fokus- und Hover-Indikator für Menüpunkte */
+nav ul li a {
+  position: relative;
+  padding: 10px;
+  color: #565656;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  border: 4px solid #e64414; /* Dickerer roter Rahmen bei Fokus und Hover */
+  color: #000; /* Textfarbe ändern, um Lesbarkeit zu gewährleisten */
+}
+
+nav ul li a:focus::after {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  background-color: #e64414; /* Roter Indikator */
+  content: '';
+}
+
+nav ul li a[aria-current="page"] {
+  border-bottom: 4px solid #e64414; /* Roter Unterstrich nur für die aktuelle Seite */
+  color: #e64414; /* Rote Textfarbe für den aktuellen Menüpunkt */
+  font-weight: bold; /* Fettschrift für den aktuellen Menüpunkt */
+}
+
+@media (width <= 768px) {
+  .header-elements, nav, .teaser, .news, section {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    padding-top: 20px;
+  }
+
+  .video-container {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
 }
