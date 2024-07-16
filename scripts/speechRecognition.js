@@ -18,6 +18,10 @@ if ("webkitSpeechRecognition" in window) {
 
   // Funktion zur Verarbeitung von Sprachbefehlen
   function handleVoiceCommand(command) {
+    const searchInput = document.querySelector(
+      '.search-container input[type="text"]'
+    );
+
     if (command.includes("menü")) {
       document.querySelector('a[href="https://www.spiegel.de/"]').click();
     } else if (command.includes("schlagzeilen")) {
@@ -48,6 +52,13 @@ if ("webkitSpeechRecognition" in window) {
       document.querySelector('a[href=""]').click();
     } else if (command.includes("wissenschaft")) {
       document.querySelector('a[href=""]').click();
+    } else if (command.includes("suche")) {
+      searchInput.focus();
+      recognition.onresult = function (event) {
+        const searchQuery =
+          event.results[event.resultIndex][0].transcript.trim();
+        searchInput.value = searchQuery;
+      };
     }
   }
 
